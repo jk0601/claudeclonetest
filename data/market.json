@@ -1,47 +1,47 @@
 {
-  "updated_at": "2026-06-13 06:10",
+  "updated_at": "2026-06-13 23:02",
   "items": [
     {
       "name": "코스피",
-      "value": "2,712.34",
-      "change": "+15.21",
-      "change_pct": "+0.56%",
-      "direction": "up"
+      "value": "수집 중",
+      "change": "-",
+      "change_pct": "-",
+      "direction": "flat"
     },
     {
       "name": "나스닥",
-      "value": "19,864.98",
-      "change": "+102.45",
-      "change_pct": "+0.52%",
-      "direction": "up"
+      "value": "수집 중",
+      "change": "-",
+      "change_pct": "-",
+      "direction": "flat"
     },
     {
       "name": "S&P 500",
-      "value": "5,431.22",
-      "change": "-8.10",
-      "change_pct": "-0.15%",
-      "direction": "down"
+      "value": "수집 중",
+      "change": "-",
+      "change_pct": "-",
+      "direction": "flat"
     },
     {
       "name": "반도체 ETF (SOXX)",
-      "value": "238.50",
-      "change": "+3.20",
-      "change_pct": "+1.36%",
-      "direction": "up"
+      "value": "수집 중",
+      "change": "-",
+      "change_pct": "-",
+      "direction": "flat"
     },
     {
       "name": "금 ($/oz)",
-      "value": "2,348.70",
-      "change": "-5.30",
-      "change_pct": "-0.23%",
-      "direction": "down"
+      "value": "수집 중",
+      "change": "-",
+      "change_pct": "-",
+      "direction": "flat"
     },
     {
       "name": "원/달러 환율",
-      "value": "1,398원",
-      "change": "+3",
-      "change_pct": "+0.21%",
-      "direction": "up"
+      "value": "수집 중",
+      "change": "-",
+      "change_pct": "-",
+      "direction": "flat"
     }
   ]
 }

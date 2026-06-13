@@ -2,57 +2,67 @@
 scripts/collect_market.py
 역할: 주요 시장 지수를 수집하여 data/market.json 으로 저장합니다.
 
-yfinance 는 GitHub Actions IP 에서 Yahoo Finance rate limit 에 걸리므로
-investing.com 스크래핑 + 환율은 exchangerate API 로 대체합니다.
+yfinance 로 수집하되, rate limit 시 exchangerate API(환율)로 부분 보완합니다.
+period="5d" 로 요청해 주말/공휴일에도 데이터가 충분히 확보되도록 합니다.
 
-필요 라이브러리: requests, beautifulsoup4
+필요 라이브러리: yfinance, requests
 """
 
 import json
 import os
+import time
 import requests
 from datetime import datetime, timezone, timedelta
 
 KST = timezone(timedelta(hours=9))
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept-Language": "ko-KR,ko;q=0.9",
-}
-
-# investing.com 각 지수 URL
-INDICES = [
-    {"name": "코스피",    "url": "https://api.investing.com/api/financialdata/get_quotes?pair_ids=929&time_utc_offset=32400&lang_ID=18&market_hours_type=1", "key": "929"},
-    {"name": "나스닥",    "url": "https://api.investing.com/api/financialdata/get_quotes?pair_ids=13&time_utc_offset=32400&lang_ID=18&market_hours_type=1",  "key": "13"},
-    {"name": "S&P 500",  "url": "https://api.investing.com/api/financialdata/get_quotes?pair_ids=166&time_utc_offset=32400&lang_ID=18&market_hours_type=1", "key": "166"},
-    {"name": "필라델피아 반도체", "url": "https://api.investing.com/api/financialdata/get_quotes?pair_ids=49470&time_utc_offset=32400&lang_ID=18&market_hours_type=1", "key": "49470"},
-    {"name": "금 ($/oz)", "url": "https://api.investing.com/api/financialdata/get_quotes?pair_ids=8830&time_utc_offset=32400&lang_ID=18&market_hours_type=1",  "key": "8830"},
+# 수집할 종목 (period="5d" 로 주말/공휴일 대응)
+TICKERS = [
+    {"symbol": "^KS11", "name": "KOSPI",       "fmt": "comma"},
+    {"symbol": "^GSPC", "name": "S&P 500",      "fmt": "comma"},
+    {"symbol": "^SOX",  "name": "반도체(SOX)",  "fmt": "comma"},
+    {"symbol": "GC=F",  "name": "금(Gold)",     "fmt": "decimal"},
 ]
 
 
-def fetch_investing(name, url):
-    """investing.com 비공개 API 로 지수 데이터를 가져옵니다."""
-    try:
-        h = {**HEADERS, "Domain-Id": "www", "Referer": "https://www.investing.com/"}
-        res = requests.get(url, headers=h, timeout=10)
-        res.raise_for_status()
-        data = res.json()
-        quote = data["quotes"][0]
-        price      = float(quote.get("last", 0))
-        change     = float(quote.get("change", 0))
-        change_pct = float(quote.get("change_percent", 0))
-        direction  = "up" if change > 0 else ("down" if change < 0 else "flat")
-        sign       = "+" if change >= 0 else ""
-        return {
-            "name":       name,
-            "value":      f"{price:,.2f}",
-            "change":     f"{sign}{change:,.2f}",
-            "change_pct": f"{sign}{change_pct:.2f}%",
-            "direction":  direction,
-        }
-    except Exception as e:
-        print(f"  [경고] {name} 수집 실패: {e}")
-        return None
+def fmt_value(value, fmt):
+    if fmt == "comma":
+        return f"{value:,.2f}"
+    return f"{value:.2f}"
+
+
+def fetch_yfinance():
+    """yfinance 로 주요 지수를 가져옵니다. 실패 시 빈 리스트 반환."""
+    import yfinance as yf
+
+    items = []
+    for t in TICKERS:
+        try:
+            time.sleep(1)  # rate limit 방지용 딜레이
+            hist = yf.Ticker(t["symbol"]).history(period="5d")
+            if len(hist) < 2:
+                raise ValueError("데이터 부족")
+
+            prev  = float(hist["Close"].iloc[-2])
+            close = float(hist["Close"].iloc[-1])
+            change     = close - prev
+            change_pct = (change / prev * 100) if prev != 0 else 0
+            direction  = "up" if change > 0 else ("down" if change < 0 else "flat")
+            sign       = "+" if change >= 0 else ""
+
+            items.append({
+                "name":       t["name"],
+                "value":      fmt_value(close, t["fmt"]),
+                "change":     f"{sign}{fmt_value(change, t['fmt'])}",
+                "change_pct": f"{sign}{change_pct:.2f}%",
+                "direction":  direction,
+            })
+            print(f"  ✓ {t['name']}: {fmt_value(close, t['fmt'])}")
+
+        except Exception as e:
+            print(f"  [경고] {t['name']} 수집 실패: {e}")
+
+    return items
 
 
 def fetch_usd_krw():
@@ -60,8 +70,8 @@ def fetch_usd_krw():
     try:
         res = requests.get("https://open.er-api.com/v6/latest/USD", timeout=10)
         res.raise_for_status()
-        data = res.json()
-        rate = data["rates"]["KRW"]
+        rate = res.json()["rates"]["KRW"]
+        print(f"  ✓ 원/달러 환율: {rate:,.0f}원")
         return {
             "name":       "원/달러 환율",
             "value":      f"{rate:,.0f}원",
@@ -76,12 +86,11 @@ def fetch_usd_krw():
 
 def get_sample():
     return [
-        {"name": "코스피",          "value": "2,712.34", "change": "+15.21", "change_pct": "+0.56%", "direction": "up"},
-        {"name": "나스닥",           "value": "19,864.98","change": "+102.45","change_pct": "+0.52%", "direction": "up"},
-        {"name": "S&P 500",         "value": "5,431.22", "change": "-8.10",  "change_pct": "-0.15%", "direction": "down"},
-        {"name": "필라델피아 반도체", "value": "4,123.50", "change": "+32.10", "change_pct": "+0.79%", "direction": "up"},
-        {"name": "금 ($/oz)",       "value": "2,348.70", "change": "-5.30",  "change_pct": "-0.23%", "direction": "down"},
-        {"name": "원/달러 환율",     "value": "1,398원",  "change": "-",      "change_pct": "-",      "direction": "flat"},
+        {"name": "KOSPI",       "value": "2,712.34", "change": "+15.21",  "change_pct": "+0.56%", "direction": "up"},
+        {"name": "S&P 500",     "value": "5,431.22", "change": "-8.10",   "change_pct": "-0.15%", "direction": "down"},
+        {"name": "반도체(SOX)", "value": "4,123.50", "change": "+32.10",  "change_pct": "+0.79%", "direction": "up"},
+        {"name": "금(Gold)",    "value": "2,348.70", "change": "-5.30",   "change_pct": "-0.23%", "direction": "down"},
+        {"name": "원/달러 환율","value": "1,398원",  "change": "-",       "change_pct": "-",       "direction": "flat"},
     ]
 
 
@@ -89,16 +98,16 @@ def main():
     now_kst = datetime.now(KST)
     items = []
 
-    for idx in INDICES:
-        result = fetch_investing(idx["name"], idx["url"])
-        if result:
-            items.append(result)
-            print(f"  ✓ {result['name']}: {result['value']}")
+    try:
+        import yfinance  # noqa: 설치 확인
+        items = fetch_yfinance()
+    except ImportError:
+        print("[경고] yfinance 미설치")
 
+    # 환율은 별도 API 로 항상 시도
     krw = fetch_usd_krw()
     if krw:
         items.append(krw)
-        print(f"  ✓ {krw['name']}: {krw['value']}")
 
     if not items:
         print("[경고] 모든 수집 실패. 샘플 데이터를 사용합니다.")

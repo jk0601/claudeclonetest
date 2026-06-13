@@ -1,0 +1,5 @@
+# GitHub Actions 에서 pip install -r requirements.txt 로 설치됩니다.
+# yfinance: Yahoo Finance 에서 주가/환율 데이터를 가져오는 라이브러리
+yfinance==0.2.38
+# requests: HTTP 요청 라이브러리 (urllib 대체용, 필요 시 사용)
+requests==2.31.0

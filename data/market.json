@@ -1,0 +1,47 @@
+{
+  "updated_at": "2026-06-13 06:10",
+  "items": [
+    {
+      "name": "코스피",
+      "value": "2,712.34",
+      "change": "+15.21",
+      "change_pct": "+0.56%",
+      "direction": "up"
+    },
+    {
+      "name": "나스닥",
+      "value": "19,864.98",
+      "change": "+102.45",
+      "change_pct": "+0.52%",
+      "direction": "up"
+    },
+    {
+      "name": "S&P 500",
+      "value": "5,431.22",
+      "change": "-8.10",
+      "change_pct": "-0.15%",
+      "direction": "down"
+    },
+    {
+      "name": "반도체 ETF (SOXX)",
+      "value": "238.50",
+      "change": "+3.20",
+      "change_pct": "+1.36%",
+      "direction": "up"
+    },
+    {
+      "name": "금 ($/oz)",
+      "value": "2,348.70",
+      "change": "-5.30",
+      "change_pct": "-0.23%",
+      "direction": "down"
+    },
+    {
+      "name": "원/달러 환율",
+      "value": "1,398원",
+      "change": "+3",
+      "change_pct": "+0.21%",
+      "direction": "up"
+    }
+  ]
+}

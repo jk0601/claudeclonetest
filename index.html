@@ -2,32 +2,21 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <!-- 모바일에서도 잘 보이도록 viewport 설정 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>오늘의 명언 & 자동 수집 콘텐츠</title>
-
-  <!-- 구글 폰트: 한국어 웹폰트 -->
+  <title>오늘의 정보 모음</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- 스타일시트 연결 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ========================================
-       헤더 / 히어로 섹션 - 명언이 표시되는 영역
-       ======================================== -->
+  <!-- ================================================
+       1. 상단 히어로 섹션 - 영어 명언 랜덤 표시
+       ================================================ -->
   <header class="hero">
     <div class="hero-inner">
-      <!-- 사이트 이름 -->
-      <p class="site-title">Daily Quotes &amp; Contents</p>
-
-      <!-- 영어 명언 (JavaScript가 내용을 채워 넣습니다) -->
-      <blockquote>
+      <p class="site-title">Daily Info Board</p>
+      <blockquote class="quote-box">
         <p id="quote-en" class="quote-en">명언을 불러오는 중...</p>
         <p id="quote-ko" class="quote-ko"></p>
         <footer id="quote-author" class="quote-author"></footer>
@@ -35,35 +24,58 @@
     </div>
   </header>
 
-  <!-- ========================================
-       메인 콘텐츠 영역
-       ======================================== -->
+  <!-- ================================================
+       메인 콘텐츠
+       ================================================ -->
   <main class="main-content">
 
-    <!-- 업데이트 날짜 표시 -->
-    <p id="last-updated" style="font-size:0.82rem; color:#999; text-align:right; margin-bottom:1.5rem;"></p>
+    <!-- ── 섹션 1: 오늘의 날씨와 추천 코디 ── -->
+    <section class="section" id="section-weather">
+      <h2 class="section-title">🌤️ 오늘의 날씨와 추천 코디</h2>
+      <div id="weather-area">
+        <!-- script.js 가 data/weather.json 을 읽어 내용을 채웁니다 -->
+        <p class="loading-msg">날씨 정보를 불러오는 중...</p>
+      </div>
+    </section>
 
-    <!-- 자동 수집 콘텐츠가 여기에 삽입됩니다 (script.js가 처리) -->
-    <div id="content-area"></div>
+    <!-- ── 섹션 2: 오늘의 주요 뉴스 ── -->
+    <section class="section" id="section-news">
+      <h2 class="section-title">📰 오늘의 주요 뉴스</h2>
+      <div id="news-area" class="card-grid">
+        <p class="loading-msg">뉴스를 불러오는 중...</p>
+      </div>
+    </section>
+
+    <!-- ── 섹션 3: 경제/시장 체크 ── -->
+    <section class="section" id="section-market">
+      <h2 class="section-title">💹 경제/시장 체크</h2>
+      <div id="market-area" class="market-grid">
+        <p class="loading-msg">시장 정보를 불러오는 중...</p>
+      </div>
+    </section>
+
+    <!-- ── 섹션 4: 서울·경기 지원사업 정보 ── -->
+    <section class="section" id="section-supports">
+      <h2 class="section-title">🏢 서울·경기 지원사업 정보</h2>
+      <div id="supports-area" class="card-grid">
+        <p class="loading-msg">지원사업 정보를 불러오는 중...</p>
+      </div>
+    </section>
 
   </main>
 
-  <!-- ========================================
+  <!-- ================================================
        푸터
-       ======================================== -->
+       ================================================ -->
   <footer class="footer">
     <p>
-      콘텐츠는 매일 자동으로 업데이트됩니다 &nbsp;|&nbsp;
-      <a href="https://github.com/jk0601/claudeclonetest" target="_blank" rel="noopener">
-        GitHub 저장소 보기
-      </a>
+      데이터는 매일 자동으로 업데이트됩니다 &nbsp;|&nbsp;
+      <a href="https://github.com/jk0601/claudeclonetest" target="_blank" rel="noopener">GitHub 저장소</a>
     </p>
-    <p style="margin-top:0.4rem; font-size:0.78rem; opacity:0.7;">
-      GitHub Pages + GitHub Actions 자동화 예제 프로젝트
-    </p>
+    <p id="footer-updated" style="margin-top:0.3rem; font-size:0.78rem; opacity:0.6;"></p>
   </footer>
 
-  <!-- 자바스크립트 연결 (body 맨 아래에 두어야 HTML이 먼저 로드됩니다) -->
+  <!-- script.js 는 body 맨 아래에 두어야 HTML 이 먼저 로드됩니다 -->
   <script src="script.js"></script>
 </body>
 </html>

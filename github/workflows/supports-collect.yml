@@ -1,0 +1,51 @@
+# .github/workflows/supports-collect.yml
+#
+# 이 파일이 하는 일:
+#   6시간마다 기업마당 지원사업 정보만 별도로 수집합니다.
+#   지원사업은 수시로 마감되므로 더 자주 갱신합니다.
+#
+# cron: "0 */6 * * *"
+#   → 매일 0시, 6시, 12시, 18시(UTC)에 실행
+#   → 한국시간으로는 9시, 15시, 21시, 03시에 실행
+
+name: Supports Data Collection
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # 6시간마다 실행
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect-supports:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Collect supports data
+        env:
+          BIZINFO_API_KEY: ${{ secrets.BIZINFO_API_KEY }}
+        run: |
+          python scripts/collect_supports.py || echo "[경고] 지원사업 수집 실패"
+
+      - name: Commit and push supports data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/supports.json
+          git diff --cached --quiet || git commit -m "chore: update supports data [$(date +'%Y-%m-%d %H:%M')]"
+          git push

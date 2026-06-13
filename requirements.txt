@@ -3,3 +3,5 @@
 yfinance==0.2.38
 # requests: HTTP 요청 라이브러리 (urllib 대체용, 필요 시 사용)
 requests==2.31.0
+# beautifulsoup4: 웹 스크래핑용 HTML 파서 (뉴스, 지원사업 수집에 사용)
+beautifulsoup4==4.12.3

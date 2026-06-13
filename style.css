@@ -1,0 +1,296 @@
+/* ==========================================
+   기본 설정 (Reset & Base Styles)
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* 색상 변수 - 여기서 전체 색상을 한번에 관리할 수 있어요 */
+  --color-bg: #f0f2f5;
+  --color-surface: #ffffff;
+  --color-primary: #3b5bdb;
+  --color-primary-dark: #2f4ac7;
+  --color-text: #1a1a2e;
+  --color-text-muted: #6c757d;
+  --color-border: #e0e4eb;
+  --color-tag-bg: #e8eeff;
+  --color-tag-text: #3b5bdb;
+
+  /* 공통 간격 */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+
+  /* 카드 그림자 */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 6px 20px rgba(59, 91, 219, 0.15);
+
+  /* 둥근 모서리 */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+}
+
+body {
+  font-family: 'Noto Sans KR', 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   헤더 (Hero Section) - 배경 이미지 + 명언
+   ========================================== */
+.hero {
+  /* 배경 이미지 설정 - 차분한 그라데이션 오버레이를 덧씌워 텍스트가 잘 보이도록 */
+  background:
+    linear-gradient(
+      135deg,
+      rgba(20, 30, 70, 0.82) 0%,
+      rgba(40, 60, 130, 0.75) 100%
+    ),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80') center/cover no-repeat;
+  color: #ffffff;
+  padding: 5rem var(--spacing-lg) 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 미묘한 패턴 장식 */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(100, 140, 255, 0.12) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(80, 120, 220, 0.10) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* 사이트 제목 */
+.site-title {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 2.5rem;
+}
+
+/* 영어 명언 텍스트 */
+.quote-en {
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* 명언 앞뒤 큰따옴표 장식 */
+.quote-en::before { content: '\201C'; }
+.quote-en::after  { content: '\201D'; }
+
+/* 한글 해석 */
+.quote-ko {
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  opacity: 0.85;
+  font-weight: 300;
+  margin-bottom: 1.8rem;
+}
+
+/* 명언 출처 */
+.quote-author {
+  font-size: 0.9rem;
+  opacity: 0.65;
+  letter-spacing: 0.05em;
+}
+
+.quote-author::before { content: '— '; }
+
+/* ==========================================
+   메인 콘텐츠 영역
+   ========================================== */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+/* 섹션 제목 */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* 콘텐츠 섹션 간격 */
+.content-section {
+  margin-bottom: 3rem;
+}
+
+/* ==========================================
+   카드 그리드 레이아웃
+   ========================================== */
+.card-grid {
+  display: grid;
+  /* 카드를 자동으로 열로 배치 - 최소 280px, 최대 1fr */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+/* ==========================================
+   카드 스타일
+   ========================================== */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  /* 호버 시 부드러운 전환 효과 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* 카드 상단: 태그 + 날짜 */
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+.card-date {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* 카드 제목 */
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+/* 카드 요약 */
+.card-summary {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  /* 3줄까지만 표시하고 나머지는 ... 처리 */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+/* 더 보기 링크 버튼 */
+.card-link {
+  display: inline-block;
+  margin-top: 0.3rem;
+  padding: 0.45rem 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.2s ease;
+  align-self: flex-start;
+}
+
+.card-link:hover {
+  background: var(--color-primary-dark);
+}
+
+/* ==========================================
+   로딩 / 에러 메시지
+   ========================================== */
+.status-message {
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  background: #f8f9fa;
+  border: 1px dashed var(--color-border);
+}
+
+/* ==========================================
+   푸터
+   ========================================== */
+.footer {
+  text-align: center;
+  padding: 2rem var(--spacing-md);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-border);
+  margin-top: 1rem;
+}
+
+.footer a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* ==========================================
+   반응형 디자인 (모바일 대응)
+   ========================================== */
+
+/* 태블릿 이하 */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3.5rem var(--spacing-md) 3rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 소형 모바일 */
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.5rem var(--spacing-sm) 2rem;
+  }
+
+  .main-content {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+}

@@ -63,6 +63,21 @@ async function fetchJSON(url) {
   }
 }
 
+// 섹션 제목 옆에 업데이트 시각을 표시합니다.
+function setUpdatedAt(sectionId, updatedAt) {
+  if (!updatedAt) return;
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+  const title = section.querySelector('.section-title');
+  if (!title) return;
+  // 이미 추가된 경우 중복 방지
+  if (title.querySelector('.updated-at')) return;
+  const span = document.createElement('span');
+  span.className = 'updated-at';
+  span.textContent = `업데이트: ${updatedAt}`;
+  title.appendChild(span);
+}
+
 // XSS 방지: 외부 데이터를 HTML 에 그대로 넣으면 위험하므로
 // 특수문자를 안전하게 변환합니다.
 function esc(str) {
@@ -110,7 +125,7 @@ async function loadWeather() {
     </div>
   `;
 
-  // 푸터 업데이트 날짜 표시
+  setUpdatedAt('section-weather', data.updated_at);
   if (data.updated_at) {
     document.getElementById('footer-updated').textContent = `최종 업데이트: ${data.updated_at}`;
   }
@@ -129,6 +144,8 @@ async function loadNews() {
     area.innerHTML = '<p class="status-message">뉴스 데이터를 준비 중입니다.</p>';
     return;
   }
+
+  setUpdatedAt('section-news', data.updated_at);
 
   area.innerHTML = data.items.map(item => `
     <article class="card">
@@ -158,6 +175,8 @@ async function loadMarket() {
     return;
   }
 
+  setUpdatedAt('section-market', data.updated_at);
+
   // 방향 기호
   const arrow = { up: '▲', down: '▼', flat: '─' };
 
@@ -185,6 +204,8 @@ async function loadSupports() {
     area.innerHTML = '<p class="status-message">지원사업 데이터를 준비 중입니다.</p>';
     return;
   }
+
+  setUpdatedAt('section-supports', data.updated_at);
 
   area.innerHTML = data.items.map(item => `
     <article class="card">

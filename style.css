@@ -138,6 +138,19 @@ body {
   margin-bottom: 1.2rem;
   padding-bottom: 0.6rem;
   border-bottom: 2px solid var(--color-border);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* 업데이트 시각 */
+.updated-at {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  letter-spacing: 0;
 }
 
 /* 로딩/안내 문구 */

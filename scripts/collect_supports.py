@@ -1,84 +1,82 @@
 """
 scripts/collect_supports.py
-역할: 기업마당(bizinfo.go.kr) 공개 API에서 서울·경기 지원사업을 수집하여
+역할: 기업마당 웹 페이지를 스크래핑하여 서울·경기 지원사업 정보를
       data/supports.json 으로 저장합니다.
 
-사용 API: 기업마당 지원사업정보 서비스 (공공데이터포털)
-  - https://www.data.go.kr/data/15105143/openapi.do
-  - 일반 인증키(Decoding) 필요: GitHub Actions Secrets 에 BIZINFO_API_KEY 로 등록하세요.
-
-API 키 등록 방법:
-  1. https://www.data.go.kr 에서 해당 API 신청
-  2. GitHub 저장소 → Settings → Secrets and variables → Actions
-  3. New repository secret → Name: BIZINFO_API_KEY, Value: (발급받은 키)
-
-API 키가 없으면 샘플 데이터를 사용합니다.
+API 키 방식은 타임아웃이 잦으므로 웹 스크래핑 방식을 사용합니다.
+필요 라이브러리: requests, beautifulsoup4 (requirements.txt 에 포함)
 """
 
 import json
 import os
-import urllib.request
-import urllib.parse
+import requests
+from bs4 import BeautifulSoup
 from datetime import datetime, timezone, timedelta
 
 KST = timezone(timedelta(hours=9))
 
-# ──────────────────────────────────────
-# API 설정
-# GitHub Actions Secrets 에서 환경변수로 주입됩니다.
-# 로컬 실행 시에는 export BIZINFO_API_KEY=발급키 로 설정하세요.
-# ──────────────────────────────────────
-API_KEY = os.environ.get("BIZINFO_API_KEY", "")
-API_BASE = "https://www.bizinfo.go.kr/uss/rss/bizInfoServiceJSON.do"
+# 서울(6110000), 경기(6410000) 지원사업 목록
+URL = "https://www.bizinfo.go.kr/sii/siia/selectSIIA200View.do?schAreaDetailCodes=6110000,6410000"
 
-# 수집 대상 지역
-TARGET_REGIONS = ["서울", "경기"]
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+}
+
 MAX_ITEMS = 10
 
 
-def fetch_supports_api():
-    """기업마당 API에서 지원사업 목록을 가져옵니다."""
+def scrape_bizinfo():
     items = []
+    try:
+        res = requests.get(URL, headers=HEADERS, timeout=15)
+        res.raise_for_status()
+        soup = BeautifulSoup(res.text, "html.parser")
 
-    for region in TARGET_REGIONS:
-        params = urllib.parse.urlencode({
-            "crtfcKey": API_KEY,
-            "dataType": "json",
-            "pageIndex": 1,
-            "pageUnit": 5,
-            "searchCnd": region,
-        })
-        url = f"{API_BASE}?{params}"
+        for row in soup.select("table tbody tr"):
+            tds = row.select("td")
+            link_tag = row.select_one("td:nth-child(3) a") or row.select_one("td.txt_left a")
+            if not link_tag:
+                continue
 
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, timeout=10) as res:
-                data = json.loads(res.read())
+            title = link_tag.get_text(strip=True)
+            href = link_tag.get("href", "")
 
-            for entry in data.get("jsonArray", []):
-                items.append({
-                    "title":        entry.get("PBANC_TASK_NM", "제목 없음"),
-                    "region":       region,
-                    "period":       f"{entry.get('RCPT_BGNG_YMD', '')} ~ {entry.get('RCPT_END_YMD', '')}",
-                    "organization": entry.get("EXCL_INST_NM", "기관명 없음"),
-                    "summary":      entry.get("BSNS_PURP_CONT", "요약 정보 없음")[:150],
-                    "link":         entry.get("DETL_PG_URL", "https://www.bizinfo.go.kr"),
-                })
+            if not href or "javascript" in href:
+                link = "https://www.bizinfo.go.kr"
+            elif href.startswith("/"):
+                link = f"https://www.bizinfo.go.kr{href}"
+            else:
+                link = href
 
-        except Exception as e:
-            print(f"[경고] 기업마당 API 오류 ({region}): {e}")
+            period = tds[3].get_text(strip=True) if len(tds) > 3 else "상세 확인"
 
-    return items
+            region = "서울·경기"
+            if "서울" in title:
+                region = "서울"
+            elif "경기" in title:
+                region = "경기"
+
+            items.append({
+                "title": title,
+                "region": region,
+                "period": period,
+                "organization": "",
+                "summary": title,
+                "link": link,
+            })
+
+    except Exception as e:
+        print(f"[경고] 기업마당 스크래핑 실패: {e}")
+
+    return items[:MAX_ITEMS]
 
 
-def get_sample_data(now_kst):
-    """API 키가 없거나 오류 시 반환할 샘플 데이터입니다."""
-    today = now_kst.strftime("%Y-%m-%d")
+def get_sample_data():
     return [
         {
             "title": "서울형 강소기업 청년채용 지원사업",
             "region": "서울",
-            "period": f"2026-06-01 ~ 2026-06-30",
+            "period": "2026-06-01 ~ 2026-06-30",
             "organization": "서울특별시",
             "summary": "서울 소재 중소기업의 청년 신규 채용을 지원합니다. 채용 1인당 최대 720만 원 지원.",
             "link": "https://www.bizinfo.go.kr",
@@ -129,24 +127,18 @@ def get_sample_data(now_kst):
 def main():
     now_kst = datetime.now(KST)
 
-    if API_KEY:
-        print(f"[정보] API 키 확인됨. 기업마당 API 를 호출합니다.")
-        items = fetch_supports_api()
-    else:
-        # API 키가 없으면 샘플 데이터 사용
-        print("[경고] BIZINFO_API_KEY 환경변수가 설정되지 않았습니다.")
-        print("       GitHub Secrets 에 등록하면 실제 데이터가 수집됩니다.")
-        print("       현재는 샘플 데이터를 사용합니다.")
-        items = get_sample_data(now_kst)
+    print("[정보] 기업마당 웹 스크래핑 시작...")
+    items = scrape_bizinfo()
 
-    # 수집 실패 시 샘플 사용
     if not items:
-        print("[경고] 수집된 데이터 없음. 샘플 데이터를 사용합니다.")
-        items = get_sample_data(now_kst)
+        print("[경고] 스크래핑 실패. 샘플 데이터를 사용합니다.")
+        items = get_sample_data()
+    else:
+        print(f"[정보] {len(items)}건 수집 성공")
 
     result = {
         "updated_at": now_kst.strftime("%Y-%m-%d %H:%M"),
-        "items": items[:MAX_ITEMS],
+        "items": items,
     }
 
     os.makedirs("data", exist_ok=True)

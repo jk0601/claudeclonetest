@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-14",
+  "date": "2026-06-15",
   "region": "서울",
   "summary": "흐림",
   "temp_min": "18",
-  "temp_max": "26",
+  "temp_max": "30",
   "rain": "없음",
-  "dust": "보통 (47㎍/㎥)",
-  "outfit_text": "활동하기 좋은 선선한 날씨입니다. 얇은 긴팔 티셔츠나 맨투맨에 청바지 조합이 잘 어울립니다. 얇은 가디건을 하나 챙기면 완벽합니다.",
-  "outfit_image_url": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&q=80",
-  "updated_at": "2026-06-14 07:06"
+  "dust": "보통 (36㎍/㎥)",
+  "outfit_text": "최고 30°C의 더운 날씨입니다. 반팔 티셔츠, 린넨 셔츠, 가벼운 면 팬츠를 추천합니다. 자외선 차단을 위해 선크림과 가벼운 모자를 챙기세요.",
+  "outfit_image_url": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80",
+  "updated_at": "2026-06-15 07:14"
 }

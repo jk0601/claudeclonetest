@@ -18,5 +18,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: ${{ github.repository }}
-          retain_days: 0 # 💡 최근 7일 동안의 기록만 남기고 모두 삭제합니다 (숫자 변경 가능)
-          keep_minimum_runs: 1 # 💡 일주일이 지났어도 최소 3개의 기록은 항상 남겨둡니다
+          retain_days: 3 # 💡 최근 3일 동안의 기록만 남기고 모두 삭제합니다 (숫자 변경 가능)
+          keep_minimum_runs: 3 # 💡 일주일이 지났어도 최소 3개의 기록은 항상 남겨둡니다

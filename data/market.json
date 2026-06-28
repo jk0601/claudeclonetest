@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28 07:05",
+  "updated_at": "2026-06-29 07:03",
   "items": [
     {
       "name": "KOSPI",
@@ -24,16 +24,16 @@
     },
     {
       "name": "반도체(SOX)",
-      "value": "13,940.87",
-      "change": "+482.67",
-      "change_pct": "+3.59%",
-      "direction": "up"
+      "value": "13,203.57",
+      "change": "-737.30",
+      "change_pct": "-5.29%",
+      "direction": "down"
     },
     {
       "name": "금 ($/oz)",
-      "value": "4078.70",
-      "change": "+48.20",
-      "change_pct": "+1.20%",
+      "value": "4096.30",
+      "change": "+65.80",
+      "change_pct": "+1.63%",
       "direction": "up"
     },
     {

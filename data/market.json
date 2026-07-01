@@ -1,44 +1,44 @@
 {
-  "updated_at": "2026-07-01 07:16",
+  "updated_at": "2026-07-02 07:19",
   "items": [
     {
       "name": "KOSPI",
-      "value": "8,394.65",
-      "change": "-16.56",
-      "change_pct": "-0.20%",
-      "direction": "down"
+      "value": "8,476.48",
+      "change": "+81.83",
+      "change_pct": "+0.97%",
+      "direction": "up"
     },
     {
       "name": "S&P 500",
-      "value": "7,499.36",
-      "change": "+58.93",
-      "change_pct": "+0.79%",
-      "direction": "up"
+      "value": "7,483.23",
+      "change": "-16.13",
+      "change_pct": "-0.22%",
+      "direction": "down"
     },
     {
       "name": "나스닥",
-      "value": "26,213.72",
-      "change": "+393.58",
-      "change_pct": "+1.52%",
-      "direction": "up"
+      "value": "26,040.03",
+      "change": "-173.69",
+      "change_pct": "-0.66%",
+      "direction": "down"
     },
     {
       "name": "반도체(SOX)",
-      "value": "14,246.96",
-      "change": "+537.30",
-      "change_pct": "+3.92%",
-      "direction": "up"
+      "value": "13,353.28",
+      "change": "-893.68",
+      "change_pct": "-6.27%",
+      "direction": "down"
     },
     {
       "name": "금 ($/oz)",
-      "value": "4028.40",
-      "change": "+6.10",
-      "change_pct": "+0.15%",
+      "value": "4048.00",
+      "change": "+25.10",
+      "change_pct": "+0.62%",
       "direction": "up"
     },
     {
       "name": "원/달러 환율",
-      "value": "1,542원",
+      "value": "1,549원",
       "change": "-",
       "change_pct": "-",
       "direction": "flat"

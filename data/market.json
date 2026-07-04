@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-07-04 07:06",
+  "updated_at": "2026-07-05 07:00",
   "items": [
     {
       "name": "KOSPI",
-      "value": "7,648.09",
-      "change": "-655.32",
-      "change_pct": "-7.89%",
-      "direction": "down"
+      "value": "8,088.34",
+      "change": "+440.25",
+      "change_pct": "+5.76%",
+      "direction": "up"
     },
     {
       "name": "S&P 500",
@@ -38,7 +38,7 @@
     },
     {
       "name": "원/달러 환율",
-      "value": "1,544원",
+      "value": "1,532원",
       "change": "-",
       "change_pct": "-",
       "direction": "flat"

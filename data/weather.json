@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-08",
+  "date": "2026-07-09",
   "region": "서울",
-  "summary": "강한 비",
+  "summary": "진한 이슬비",
   "temp_min": "23",
   "temp_max": "26",
-  "rain": "48.4mm 예상",
-  "dust": "좋음 (11㎍/㎥)",
+  "rain": "5.6mm 예상",
+  "dust": "좋음 (6㎍/㎥)",
   "outfit_text": "비 오는 날엔 방수 재킷이나 레인코트를 챙기세요. 어두운 색 하의와 방수 신발로 마무리하면 실용적입니다. 접이식 우산도 잊지 마세요.",
   "outfit_image_url": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=600&q=80",
-  "updated_at": "2026-07-08 07:12"
+  "updated_at": "2026-07-09 07:09"
 }

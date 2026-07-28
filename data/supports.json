@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-28 11:34",
+  "updated_at": "2026-07-28 17:34",
   "items": [
+    {
+      "title": "[경기] 2026년 스마트제조 AXㆍDX 우수사례 공모전 참여기업 모집 공고",
+      "region": "경기",
+      "period": "2026-07-27 ~ 2026-08-21",
+      "organization": "",
+      "summary": "[경기] 2026년 스마트제조 AXㆍDX 우수사례 공모전 참여기업 모집 공고",
+      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124787"
+    },
+    {
+      "title": "[경기] 동두천시 2026년 사물인터넷(IoT) 측정기기 부착 지원사업 공고",
+      "region": "경기",
+      "period": "2026-07-27 ~ 2026-08-31",
+      "organization": "",
+      "summary": "[경기] 동두천시 2026년 사물인터넷(IoT) 측정기기 부착 지원사업 공고",
+      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124781"
+    },
     {
       "title": "[서울] 2026년 두바이 뷰티월드 전시회(Beauty World Middle East 2026) 참가기업 모집 공고",
       "region": "서울",
@@ -64,22 +80,6 @@
       "organization": "",
       "summary": "[서울] 종로구 2026년 하반기 중소기업육성기금 융자 지원 계획 공고",
       "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124675"
-    },
-    {
-      "title": "[서울] 종로구 2026년 소상공인 라이브커머스 지원사업 참여자 모집 재공고",
-      "region": "서울",
-      "period": "2026-07-21 ~ 2026-08-04",
-      "organization": "",
-      "summary": "[서울] 종로구 2026년 소상공인 라이브커머스 지원사업 참여자 모집 재공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124674"
-    },
-    {
-      "title": "[경기] 용인시 2026년 글로벌 수출상담회 참여기업 모집 공고",
-      "region": "경기",
-      "period": "2026-07-23 ~ 2026-08-20",
-      "organization": "",
-      "summary": "[경기] 용인시 2026년 글로벌 수출상담회 참여기업 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124669"
     }
   ]
 }

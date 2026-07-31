@@ -1,6 +1,30 @@
 {
-  "updated_at": "2026-07-31 11:51",
+  "updated_at": "2026-07-31 17:50",
   "items": [
+    {
+      "title": "[경기] 고양시 2026년 콘텐츠코리아 전시회 참가 기업 모집 공고",
+      "region": "경기",
+      "period": "2026-07-29 ~ 2026-08-26",
+      "organization": "",
+      "summary": "[경기] 고양시 2026년 콘텐츠코리아 전시회 참가 기업 모집 공고",
+      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124965"
+    },
+    {
+      "title": "2026년 G-Bio Funding Lab 경기 바이오스타트업 투자유치 역량강화 참가기업 모집 공고",
+      "region": "경기",
+      "period": "2026-07-28 ~ 2026-08-14",
+      "organization": "",
+      "summary": "2026년 G-Bio Funding Lab 경기 바이오스타트업 투자유치 역량강화 참가기업 모집 공고",
+      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124964"
+    },
+    {
+      "title": "[경기] 화성시 2026년 중소기업 운전자금 지원사업 추가모집 공고",
+      "region": "경기",
+      "period": "2026-08-03 ~ 2026-08-07",
+      "organization": "",
+      "summary": "[경기] 화성시 2026년 중소기업 운전자금 지원사업 추가모집 공고",
+      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124952"
+    },
     {
       "title": "[경기] 남양주시 2026년 사물인터넷(IoT) 측정기기 부착 지원사업 공고",
       "region": "경기",
@@ -56,30 +80,6 @@
       "organization": "",
       "summary": "[경기] 화성시 2026년 중소기업 노동자 기숙사 임차비 지원사업 참여기업 추가모집 공고",
       "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124854"
-    },
-    {
-      "title": "[경기] 화성시 2026년 2차 공공기관 해외지사화 참가 지원사업 참가기업 모집 공고",
-      "region": "경기",
-      "period": "2026-07-28 ~ 2026-08-21",
-      "organization": "",
-      "summary": "[경기] 화성시 2026년 2차 공공기관 해외지사화 참가 지원사업 참가기업 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124852"
-    },
-    {
-      "title": "[경기] 시흥시 2026년 소규모 점포 시설개선 지원사업 모집 공고",
-      "region": "경기",
-      "period": "2026-07-27 ~ 2026-08-18",
-      "organization": "",
-      "summary": "[경기] 시흥시 2026년 소규모 점포 시설개선 지원사업 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124845"
-    },
-    {
-      "title": "2026년 시흥바이오 소부장 캡스톤 경진대회 참여기업 모집 공고",
-      "region": "서울·경기",
-      "period": "2026-07-27 ~ 2026-08-10",
-      "organization": "",
-      "summary": "2026년 시흥바이오 소부장 캡스톤 경진대회 참여기업 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000124844"
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-03",
+  "date": "2026-08-04",
   "region": "서울",
-  "summary": "흐림",
-  "temp_min": "24",
+  "summary": "대체로 맑음",
+  "temp_min": "26",
   "temp_max": "35",
   "rain": "없음",
-  "dust": "좋음 (26㎍/㎥)",
+  "dust": "좋음 (24㎍/㎥)",
   "outfit_text": "최고 35°C의 더운 날씨입니다. 반팔 티셔츠, 린넨 셔츠, 가벼운 면 팬츠를 추천합니다. 자외선 차단을 위해 선크림과 가벼운 모자를 챙기세요.",
   "outfit_image_url": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600&q=80",
-  "updated_at": "2026-08-03 06:58"
+  "updated_at": "2026-08-04 07:10"
 }

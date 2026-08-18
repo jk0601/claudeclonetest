@@ -1,85 +1,53 @@
 {
-  "updated_at": "2026-08-18 15:42",
+  "updated_at": "2026-08-18 21:46",
   "items": [
     {
-      "title": "[경기] 시흥시 2026년 하반기 시흥창업센터 메이커스페이스 참여 모집 공고",
-      "region": "경기",
-      "period": "예산 소진시까지",
-      "organization": "",
-      "summary": "[경기] 시흥시 2026년 하반기 시흥창업센터 메이커스페이스 참여 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000125523"
-    },
-    {
-      "title": "[경기] 안산시 2026년 지역특화분야 유망 창업기업 지원사업 참여기업 모집 공고",
-      "region": "경기",
-      "period": "2026-08-14 ~ 2026-08-28",
-      "organization": "",
-      "summary": "[경기] 안산시 2026년 지역특화분야 유망 창업기업 지원사업 참여기업 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000125515"
-    },
-    {
-      "title": "[서울] 종로구 2026년 소상공인 라이브커머스 지원사업 참여자 모집 재공고",
+      "title": "서울형 강소기업 청년채용 지원사업",
       "region": "서울",
-      "period": "2026-08-12 ~ 2026-12-31",
-      "organization": "",
-      "summary": "[서울] 종로구 2026년 소상공인 라이브커머스 지원사업 참여자 모집 재공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000125511"
+      "period": "2026-06-01 ~ 2026-06-30",
+      "organization": "서울특별시",
+      "summary": "서울 소재 중소기업의 청년 신규 채용을 지원합니다. 채용 1인당 최대 720만 원 지원.",
+      "link": "https://www.bizinfo.go.kr"
     },
     {
-      "title": "[서울] 용산구 이태원 1ㆍ2동 대상 특별 중소기업육성기금 융자지원계획 공고",
+      "title": "경기도 소상공인 디지털 전환 지원",
+      "region": "경기",
+      "period": "2026-05-15 ~ 2026-07-15",
+      "organization": "경기도경제과학진흥원",
+      "summary": "경기도 소재 소상공인을 대상으로 디지털 전환 컨설팅 및 솔루션 도입 비용의 최대 70%를 지원합니다.",
+      "link": "https://www.bizinfo.go.kr"
+    },
+    {
+      "title": "서울 창업허브 입주기업 모집",
       "region": "서울",
-      "period": "예산 소진시까지",
-      "organization": "",
-      "summary": "[서울] 용산구 이태원 1ㆍ2동 대상 특별 중소기업육성기금 융자지원계획 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000125499"
+      "period": "2026-06-10 ~ 2026-06-28",
+      "organization": "서울창업허브",
+      "summary": "서울 마포구 창업허브 입주 기업을 모집합니다. 사무공간, 멘토링, 투자 연계 프로그램 제공.",
+      "link": "https://www.bizinfo.go.kr"
     },
     {
-      "title": "[경기] 화성시 2026년 하반기 마케팅 활성화 지원  참가기업 모집 공고",
+      "title": "경기도 기술개발사업 R&D 지원",
       "region": "경기",
-      "period": "2026-08-13 ~ 2026-10-30",
-      "organization": "",
-      "summary": "[경기] 화성시 2026년 하반기 마케팅 활성화 지원  참가기업 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000125493"
+      "period": "2026-06-01 ~ 2026-06-20",
+      "organization": "경기도",
+      "summary": "경기도 소재 중소기업의 기술 개발을 지원합니다. 과제당 최대 1억 원, 수행기간 1년 이내.",
+      "link": "https://www.bizinfo.go.kr"
     },
     {
-      "title": "[경기] 김포시 2026년 에너지효율시장 조성사업 참여기업 모집 공고",
-      "region": "경기",
-      "period": "2026-08-12 ~ 2026-08-28",
-      "organization": "",
-      "summary": "[경기] 김포시 2026년 에너지효율시장 조성사업 참여기업 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000125482"
-    },
-    {
-      "title": "[경기] 군포시 2026년 4차 지식재산 긴급지원 사업(국내출원지원) 모집 공고",
-      "region": "경기",
-      "period": "2026-08-12 ~ 2026-08-28",
-      "organization": "",
-      "summary": "[경기] 군포시 2026년 4차 지식재산 긴급지원 사업(국내출원지원) 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000125476"
-    },
-    {
-      "title": "[경기] 하남시 2026년 3차 지식재산 긴급지원 사업(국내상표ㆍ디자인출원) 모집 공고",
-      "region": "경기",
-      "period": "2026-08-12 ~ 2026-08-28",
-      "organization": "",
-      "summary": "[경기] 하남시 2026년 3차 지식재산 긴급지원 사업(국내상표ㆍ디자인출원) 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000125474"
-    },
-    {
-      "title": "[경기] 용인시 2026년 3차 소공인특화지원센터 지원사업 모집 공고",
-      "region": "경기",
-      "period": "2026-08-13 ~ 2026-08-26",
-      "organization": "",
-      "summary": "[경기] 용인시 2026년 3차 소공인특화지원센터 지원사업 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000125472"
-    },
-    {
-      "title": "[서울] 2026년 서울창업허브M+ 글로벌 오픈 이노베이션 참여기업 모집 공고",
+      "title": "서울시 사회적기업 육성 지원",
       "region": "서울",
-      "period": "2026-08-13 ~ 2026-09-11",
-      "organization": "",
-      "summary": "[서울] 2026년 서울창업허브M+ 글로벌 오픈 이노베이션 참여기업 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000125460"
+      "period": "2026-06-05 ~ 2026-07-05",
+      "organization": "서울시 사회적경제지원센터",
+      "summary": "사회적기업 인증 준비 중인 서울 소재 기업에 컨설팅, 교육, 초기 운영비를 지원합니다.",
+      "link": "https://www.bizinfo.go.kr"
+    },
+    {
+      "title": "경기도 여성기업 경영 역량 강화 사업",
+      "region": "경기",
+      "period": "2026-06-01 ~ 2026-07-31",
+      "organization": "경기도여성능력개발센터",
+      "summary": "경기도 소재 여성 대표 중소기업에 마케팅, 회계, 법률 등 경영 전반의 역량 강화 교육을 제공합니다.",
+      "link": "https://www.bizinfo.go.kr"
     }
   ]
 }

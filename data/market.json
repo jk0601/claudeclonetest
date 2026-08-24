@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24 06:23",
+  "updated_at": "2026-08-25 06:31",
   "items": [
     {
       "name": "KOSPI",
@@ -10,30 +10,30 @@
     },
     {
       "name": "S&P 500",
-      "value": "7,674.37",
-      "change": "+33.21",
-      "change_pct": "+0.43%",
-      "direction": "up"
+      "value": "7,652.86",
+      "change": "-21.51",
+      "change_pct": "-0.28%",
+      "direction": "down"
     },
     {
       "name": "나스닥",
-      "value": "26,180.46",
-      "change": "+113.29",
-      "change_pct": "+0.43%",
-      "direction": "up"
+      "value": "25,980.19",
+      "change": "-200.27",
+      "change_pct": "-0.76%",
+      "direction": "down"
     },
     {
       "name": "반도체(SOX)",
-      "value": "11,740.37",
-      "change": "-59.65",
-      "change_pct": "-0.51%",
+      "value": "11,423.17",
+      "change": "-317.20",
+      "change_pct": "-2.70%",
       "direction": "down"
     },
     {
       "name": "금 ($/oz)",
-      "value": "4680.60",
-      "change": "+164.30",
-      "change_pct": "+3.64%",
+      "value": "4710.00",
+      "change": "+85.90",
+      "change_pct": "+1.86%",
       "direction": "up"
     },
     {

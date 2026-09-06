@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06 07:42",
+  "updated_at": "2026-09-07 07:45",
   "items": [
     {
       "name": "KOSPI",
@@ -31,14 +31,14 @@
     },
     {
       "name": "금 ($/oz)",
-      "value": "4429.80",
-      "change": "-61.90",
-      "change_pct": "-1.38%",
-      "direction": "down"
+      "value": "4476.60",
+      "change": "+46.80",
+      "change_pct": "+1.06%",
+      "direction": "up"
     },
     {
       "name": "원/달러 환율",
-      "value": "1,349원",
+      "value": "1,350원",
       "change": "-",
       "change_pct": "-",
       "direction": "flat"

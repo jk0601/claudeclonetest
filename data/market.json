@@ -1,39 +1,39 @@
 {
-  "updated_at": "2026-09-29 09:51",
+  "updated_at": "2026-09-30 09:07",
   "items": [
     {
       "name": "KOSPI",
-      "value": "6,879.67",
-      "change": "-201.25",
-      "change_pct": "-2.84%",
+      "value": "6,889.74",
+      "change": "-191.18",
+      "change_pct": "-2.70%",
       "direction": "down"
     },
     {
       "name": "S&P 500",
-      "value": "7,683.69",
-      "change": "-59.72",
-      "change_pct": "-0.77%",
+      "value": "7,670.84",
+      "change": "-12.85",
+      "change_pct": "-0.17%",
       "direction": "down"
     },
     {
       "name": "나스닥",
-      "value": "26,820.38",
-      "change": "-248.34",
-      "change_pct": "-0.92%",
+      "value": "26,797.54",
+      "change": "-22.84",
+      "change_pct": "-0.09%",
       "direction": "down"
     },
     {
       "name": "반도체(SOX)",
-      "value": "12,465.24",
-      "change": "-203.69",
-      "change_pct": "-1.61%",
-      "direction": "down"
+      "value": "12,629.16",
+      "change": "+163.92",
+      "change_pct": "+1.32%",
+      "direction": "up"
     },
     {
       "name": "금 ($/oz)",
-      "value": "4155.10",
-      "change": "-166.10",
-      "change_pct": "-3.84%",
+      "value": "4218.90",
+      "change": "-102.30",
+      "change_pct": "-2.37%",
       "direction": "down"
     },
     {

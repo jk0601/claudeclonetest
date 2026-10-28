@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-10-28 13:24",
+  "updated_at": "2026-10-28 21:14",
   "items": [
+    {
+      "title": "[서울] 2027년 Dream Play(LGD 스타트업 육성프로그램 9기) 모집 공고",
+      "region": "서울",
+      "period": "2026-10-22 ~ 2026-11-13",
+      "organization": "",
+      "summary": "[서울] 2027년 Dream Play(LGD 스타트업 육성프로그램 9기) 모집 공고",
+      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000127514"
+    },
+    {
+      "title": "[경기] 안양시 2026년 유망기업 유통상담회 연계 투자상담회 참가기업 모집 공고",
+      "region": "경기",
+      "period": "모집 완료시까지",
+      "organization": "",
+      "summary": "[경기] 안양시 2026년 유망기업 유통상담회 연계 투자상담회 참가기업 모집 공고",
+      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000127503"
+    },
     {
       "title": "2026년 연천군 중소기업 육성자금 융자 지원사업 공고",
       "region": "서울·경기",
@@ -64,22 +80,6 @@
       "organization": "",
       "summary": "2026년 4차 성남 시니어산업혁신센터 고령친화 우수제품 전시 지원사업 모집 공고",
       "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000127478"
-    },
-    {
-      "title": "[경기] 화성시 2026년 2차 스마트 물류비 지원사업 참가기업 모집 연장 공고",
-      "region": "경기",
-      "period": "2026-10-01 ~ 2026-10-30",
-      "organization": "",
-      "summary": "[경기] 화성시 2026년 2차 스마트 물류비 지원사업 참가기업 모집 연장 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000127470"
-    },
-    {
-      "title": "[경기] 상생 노무컨설팅 참여 사업장 모집 공고",
-      "region": "경기",
-      "period": "2026-10-22 ~ 2026-11-20",
-      "organization": "",
-      "summary": "[경기] 상생 노무컨설팅 참여 사업장 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000127465"
     }
   ]
 }

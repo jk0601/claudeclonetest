@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-31 09:31",
+  "updated_at": "2026-11-01 08:58",
   "items": [
     {
       "name": "KOSPI",
-      "value": "5,937.66",
-      "change": "-74.78",
-      "change_pct": "-1.24%",
+      "value": "5,730.74",
+      "change": "-206.92",
+      "change_pct": "-3.48%",
       "direction": "down"
     },
     {
@@ -31,14 +31,14 @@
     },
     {
       "name": "금 ($/oz)",
-      "value": "3884.90",
-      "change": "-146.50",
-      "change_pct": "-3.63%",
+      "value": "3898.90",
+      "change": "-132.50",
+      "change_pct": "-3.29%",
       "direction": "down"
     },
     {
       "name": "원/달러 환율",
-      "value": "1,338원",
+      "value": "1,335원",
       "change": "-",
       "change_pct": "-",
       "direction": "flat"

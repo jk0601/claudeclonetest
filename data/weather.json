@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "region": "서울",
-  "summary": "부분적으로 흐림",
+  "summary": "흐림",
   "temp_min": "7",
-  "temp_max": "18",
+  "temp_max": "13",
   "rain": "없음",
-  "dust": "보통 (69㎍/㎥)",
-  "outfit_text": "일교차가 11°C로 큽니다. 아침저녁엔 얇은 겉옷이나 가디건을 챙기고, 낮에는 가볍게 반팔 또는 얇은 긴팔 티셔츠를 입으세요.",
-  "outfit_image_url": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600&q=80",
-  "updated_at": "2026-10-30 09:39"
+  "dust": "좋음 (7㎍/㎥)",
+  "outfit_text": "최고 기온이 13°C의 쌀쌀한 날씨입니다. 니트, 코트, 머플러를 추천합니다. 두꺼운 한 겹보다 얇은 레이어드 스타일이 체온 조절에 효과적입니다.",
+  "outfit_image_url": "https://images.unsplash.com/photo-1511401139252-f158d3209c17?w=600&q=80",
+  "updated_at": "2026-10-31 09:31"
 }

@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-11-26 12:24",
+  "updated_at": "2026-11-26 16:09",
   "items": [
+    {
+      "title": "[서울] 송파구 2026년 중소기업 융자지원 계획 공고",
+      "region": "서울",
+      "period": "예산 소진시까지",
+      "organization": "",
+      "summary": "[서울] 송파구 2026년 중소기업 융자지원 계획 공고",
+      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000128149"
+    },
     {
       "title": "[경기] 김포시 2027년 청년어촌정착지원 사업 대상자 모집 공고",
       "region": "경기",
@@ -72,14 +80,6 @@
       "organization": "",
       "summary": "[경기] 안산시 2027년 청년어촌정착지원 사업 대상자 모집 공고",
       "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000128008"
-    },
-    {
-      "title": "[경기] 2026년 열린 혁신 디지털 오픈랩 구축 디지털오픈랩 IR 데모데이 참여기업 모집 공고",
-      "region": "경기",
-      "period": "2026-11-16 ~ 2026-11-27",
-      "organization": "",
-      "summary": "[경기] 2026년 열린 혁신 디지털 오픈랩 구축 디지털오픈랩 IR 데모데이 참여기업 모집 공고",
-      "link": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=&rows=15&cpage=&cat=&schPblancDiv=&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=&condition1=&keyword=&pblancId=PBLN_000000000127990"
     }
   ]
 }
